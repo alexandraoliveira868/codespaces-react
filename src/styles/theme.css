@@ -1,0 +1,24 @@
+:root {
+--chocolate-cosmos: #5e0b15ff;
+--cordovan: #90323dff;
+--dun: #d9cab3ff;
+--bronze: #bc8034ff;
+--beaver: #8c7a6bff;
+
+--primary: #90323dff;
+--primary-light: #b35a67ff;
+--primary-dark: #6b232cff;
+--primary-contrast: #ffffff;
+--primary-muted: #e5cfd3ff;
+
+--gray-50:  #f9fafb;
+--gray-100: #f3f4f6;
+--gray-200: #e5e7eb;
+--gray-300: #d1d5db;
+--gray-400: #9ca3af;
+--gray-500: #6b7280;
+--gray-600: #4b5563;
+--gray-700: #374151;
+--gray-800: #1f2937;
+--gray-900: #111827;
+}

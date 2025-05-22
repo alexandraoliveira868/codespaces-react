@@ -5,11 +5,11 @@
 --bronze: #bc8034ff;
 --beaver: #8c7a6bff;
 
---primary: #90323dff;
---primary-light: #b35a67ff;
---primary-dark: #6b232cff;
---primary-contrast: #ffffff;
---primary-muted: #e5cfd3ff;
+--primary: rgb(32, 210, 255);
+--primary-light: rgb(215, 246, 247);
+--primary-dark: rgb(35, 117, 138);
+--primary-contrast: #0c0c0cfb;
+--primary-muted: rgb(207, 226, 229);
 
 --gray-50:  #f9fafb;
 --gray-100: #f3f4f6;

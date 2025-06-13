@@ -1,9 +1,11 @@
-import styles from "./Avaliacao.module.css";
+import styles from "./Main.module.css";
 
-export function Avaliacao() {
+export function Main() {
   return (
     <div className={styles.container}>
-      <header className={styles.header} />
+      <div className={styles.header} >
+        <h1 className={styles.title}>Foco, Força, Fé</h1>
+      </div>
       <main className={styles.main}>
         <div className={styles.grid}>
           <div className={styles.card}>
@@ -28,7 +30,15 @@ export function Avaliacao() {
           </div>
         </div>
       </main>
-      <footer className={styles.footer} />
+      <div className={styles.footer} >
+        <p className={styles.footerText}>IFRN - Campus Macau
+          <br/>
+          Curso Técnico em Informática
+          <br/>
+          Programação para Internet 2025
+        </p>
+        <h2 className={styles.footerTitle}>Alexandra Oliveira</h2>
+      </div>
     </div>
   );
 }

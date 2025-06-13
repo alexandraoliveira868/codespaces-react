@@ -4,6 +4,7 @@
   grid-template-areas: 
     "header header header"
     "main main main"
+    "main main main"
     "footer footer footer";
 
     grid-template-rows: 10rem 5rem calc(100vh - 25rem) 5rem 10rem;
@@ -21,16 +22,41 @@
 .header {
   grid-area: header;
   background-color: rgb(2, 19, 56);
+  color: var(--primary-light);
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Tahoma", sans-serif;
+}
+.main {
+  grid-area: main;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-size: 1.5rem;
+  padding: 2rem;
+  font-family: "Tahoma", sans-serif;
 }
 .footer {
   grid-area: footer;
   background-color: rgb(255, 255, 255);
+  padding: 4rem;
 }
-
+.footer p {
+  color: var(--primary-contrast-dark);
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: left;
+}
+.footer h2 {
+  color: var(--primary-contrast-dark);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .grid {
   padding: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-template-rows: repeat(auto-fit, min-content);
   gap: 3rem;
 }
@@ -38,10 +64,19 @@
 .card {
   background-color: var(--primary-light);
   border-radius: 1rem;
-  color: var(--primary-contrast-light);
+  color: var(--primary-contrast-dark);
   padding: 1rem;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
   font-size: 3rem;
   text-align: center;
   height: 20rem;
+}
+.card h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.card p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: aliceblue;
 }

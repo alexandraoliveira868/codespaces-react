@@ -1,55 +1,49 @@
 import { useEffect, useState } from "react";
 import styles from "./ProductList.module.css";
-import CircularProgress from "@mui/material/CircularProgress";
+import { CircularProgress } from "@mui/material";
+import { Product } from "./Product";
 
-export function ProductList() {
-  var category = "womens-dresses";
-  var limit = 20;
-  var apiUrl = `https://dummyjson.com/products/category/${category}category}?limit=${limit}&select=id,thumbnail,title,price,description`;
-//https://dummyjson.com/products/category/womens-dresses?limit=20&select=id,thumbnail,price,title,description
+export function ProductList({ addToCart }) {
+  var category = "beauty";
+  var limit = 12;
+  var apiUrl = `https://dummyjson.com/products/category/${category}?limit=${limit}&select=id,thumbnail,title,price,description`;
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchProducts () {
+    async function fetchProducts() {
       try {
         const response = await fetch(apiUrl);
         const data = await response.json();
+
         setProducts(data.products);
       } catch (error) {
         setError(error);
       } finally {
         setLoading(false);
       }
-    };
-setTimeout(() => {
-    fetchProducts();
-    
-  }, []);  
+    }
+    setTimeout(() => {
+      fetchProducts();
+    }, 2000);
+  }, []);
   return (
     <div className={styles.container}>
-      <h1>TRJ Megastore</h1>
-      {products.map((product) => (
-        <div key={product.id} className={styles.product}>
-          <img
-            src={product.thumbnail}
-            alt={product.title}
-            className={styles.thumbnail}
-          />
-          <h2 className={styles.title}>{product.title}</h2>
-          <p className={styles.description}>{product.description}</p>
-          <p className={styles.price}>${product.price}</p>
-        </div>
-      ))}
+      <div className={styles.grid}>
+        {products.map((product) => (
+          <Product key={product.id} product={product} addToCart={addToCart} />
+        ))}
+      </div>
       {loading && (
         <div>
           <CircularProgress
-            // size="md"
+            // size="sm"
             thickness={5}
             style={{ margin: "2rem auto", display: "block" }}
             sx={{
-              color: " #000000",
+              color: "#001111",
             }}
           />
           <p>Loading products...</p>

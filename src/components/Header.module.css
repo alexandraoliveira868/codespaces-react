@@ -7,24 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
 }
 
 .header a {
   color: var(--primary);
   text-decoration: none;
-}
-
-.cartLink {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.cartCount {
-  background-color: #e60000;
-  color: white;
-  padding: 0.2rem 0.5rem;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 1rem;
 }
